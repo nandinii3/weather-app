@@ -1,0 +1,76 @@
+/* ── Global Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── CSS Variables ── */
+:root {
+  --cyan: #67e8f9;
+  --cyan-dim: rgba(103,232,249,0.15);
+  --cyan-border: rgba(103,232,249,0.3);
+  --glass-bg: rgba(255,255,255,0.08);
+  --glass-border: rgba(255,255,255,0.15);
+  --glass-hover: rgba(255,255,255,0.13);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255,255,255,0.6);
+  --text-muted: rgba(255,255,255,0.35);
+  --bg-gradient: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  --danger: rgba(252,165,165,0.9);
+  --danger-bg: rgba(239,68,68,0.15);
+  --radius: 14px;
+  --radius-sm: 8px;
+  --transition: 0.2s ease;
+}
+
+/* ── Light Mode ── */
+body.light {
+  --glass-bg: rgba(255,255,255,0.55);
+  --glass-border: rgba(0,0,0,0.10);
+  --glass-hover: rgba(255,255,255,0.75);
+  --text-primary: #0f2027;
+  --text-secondary: #2c5364;
+  --text-muted: #7a9aaa;
+  --bg-gradient: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 50%, #80deea 100%);
+  --cyan: #0891b2;
+  --cyan-dim: rgba(8,145,178,0.12);
+  --cyan-border: rgba(8,145,178,0.3);
+  --danger: #b91c1c;
+  --danger-bg: rgba(239,68,68,0.10);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  color: var(--text-primary);
+  transition: background var(--transition), color var(--transition);
+}
+
+/* ── Glass Card ── */
+.glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: background var(--transition);
+}
+.glass:hover { background: var(--glass-hover); }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--glass-border); border-radius: 4px; }
+
+/* ── Spinner ── */
+@keyframes spin { to { transform: rotate(360deg); } }
+.spinner {
+  width: 32px; height: 32px;
+  border: 3px solid var(--glass-border);
+  border-top-color: var(--cyan);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto;
+}
+
+/* ── Fade in ── */
+@keyframes fadeIn { from { opacity:0; transform:translateY(10px);} to {opacity:1;transform:translateY(0);} }
+.fade-in { animation: fadeIn 0.4s ease forwards; }
