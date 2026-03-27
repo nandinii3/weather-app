@@ -52,15 +52,15 @@ Atmos is a full-stack weather application built as part of the PM Accelerator AI
 ```
 weather-app/
 ├── backend/
-│   ├── .env                  ← API keys (not committed to GitHub)
-│   ├── .env.example          ← Template showing required keys
-│   ├── server.js             ← Express server entry point
+│   ├── .env                 
+│   ├── .env.example         
+│   ├── server.js             
 │   ├── package.json
 │   ├── models/
-│   │   └── WeatherRecord.js  ← MongoDB schema
+│   │   └── WeatherRecord.js 
 │   └── routes/
-│       ├── weather.js        ← CRUD + API integration routes
-│       └── export.js         ← Data export routes
+│       ├── weather.js       
+│       └── export.js        
 └── frontend/
     └── src/
         ├── App.js
