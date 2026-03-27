@@ -1,4 +1,4 @@
-# Atmos — Full Stack Weather Application
+# ☁️Atmos — Full Stack Weather Application
 ### PM Accelerator Technical Assessment | Built by Nandini Shrivas
 
 ---
